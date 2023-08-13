@@ -9,5 +9,5 @@ def print_list_integer(my_list=[]):
     you are not allowed to cast integers into string
     you have to use str.format() to print integers
     """
-    for num in my_list:
-        print("{:d}".format(num))
+    for num in range(len(my_list)):
+        print("{:d}".format(my_list[num]))
