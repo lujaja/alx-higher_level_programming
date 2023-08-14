@@ -5,5 +5,5 @@
 def print_list_integer(my_list=[]):
     """Print all integers of a list."""
     if isinstance(my_list, list):
-        for num in my_list:
-            print("{:d}".format(num))
+        for num in range(len(my_list)):
+            print("{:d}".format(my_list[num]))

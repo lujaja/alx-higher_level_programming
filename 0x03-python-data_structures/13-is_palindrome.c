@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 	if (!(*head))
 		return (1);
 
-	listint_t *temp, *prev_node, *curr_node, *h;/* *t, *hh;*/
+	listint_t *temp, *prev_node, *curr_node, *h;
 	/* step one: make a copy and reverse the copy */
 	temp = h = *head;
 	prev_node = temp;
@@ -35,12 +35,8 @@ int is_palindrome(listint_t **head)
 	{
 		if (h->n != temp->n)
 			return (0);
-		/*t = temp;
-		hh = h;*/
 		h = h->next;
 		temp = temp->next;
-		/*free(t);
-		free(hh);*/
 	}
 		
 	return (1);
