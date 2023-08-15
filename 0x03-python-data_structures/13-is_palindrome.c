@@ -10,10 +10,11 @@
  */
 int is_palindrome(listint_t **head)
 {
+	listint_t *temp, *prev_node, *curr_node, *h;
+
 	if (!(*head))
 		return (1);
 
-	listint_t *temp, *prev_node, *curr_node, *h;
 	/* step one: make a copy and reverse the copy */
 	temp = h = *head;
 	prev_node = temp;
