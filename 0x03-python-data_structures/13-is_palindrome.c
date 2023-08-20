@@ -51,3 +51,43 @@ int is_palindrome(listint_t **head)
 	}
 	return (1);
 }
+/**
+ * reverse_listint - function
+ *
+ * @head: pointer pinter to head node
+ * Return: reversed listint or NULL if it fails
+ *
+ */
+listint_t *reverse_listint(listint_t **head)
+{
+	listint_t *curr_node, *prev_node, *next_node;
+
+	curr_node = *head;
+	prev_node = NULL;
+	while (curr_node)
+	{
+		next_node = curr_node->next;
+		curr_node->next = prev_node;
+		prev_node = curr_node;
+		curr_node = next_node;
+	}
+	*head = prev_node;
+	return (*head);
+}
+/**
+ * node_len - function
+ * @h: pointer
+ *
+ * Return: number of node
+ */
+int node_len(const listint_t *h)
+{
+	int size = 0;
+
+	while (h)
+	{
+		size++;
+		h = h->next;
+	}
+	return (size);
+}
