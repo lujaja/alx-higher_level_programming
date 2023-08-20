@@ -94,3 +94,20 @@ listint_t *reverse_listint(listint_t **head)
 
         return (*head);
 }
+/**
+ * node_len - function
+ * @h: pointer
+ *
+ * Return: number of node
+ */
+int node_len(const listint_t *h)
+{
+	int size = 0;
+
+	while (h)
+	{
+		size++;
+		h = h->next;
+	}
+	return (size);
+}
