@@ -46,6 +46,7 @@ class Square:
             [print(" ", end="") for j in range(self.__position[0])]
             [print("#", end="") for k in range(self.__size)]
             print("")
+        return
 
     def __str__(self):
         if self.__size == 0:
@@ -56,4 +57,4 @@ class Square:
             [print("#", end='') for k in range(self.__size)]
             if n != self.__size - 1:
                 print("")
-        return          
+        return ("")
