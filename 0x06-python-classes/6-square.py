@@ -51,9 +51,8 @@ class Square:
             value (int, int): new square coodinates.
         """
 
-        if (not isinstance(value, tuple) or
-                (len(value) != 2) or
-                (not isinstance(num, int) for num in value) or
+        if (not isinstance(value, tuple) or (len(value) != 2) or\
+                (not isinstance(num, int) for num in value) or\
                 (num < 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
             return
