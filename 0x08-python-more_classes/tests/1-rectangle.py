@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 # Lujaja Luvuga <jarzcyber@gmail.com>
+"""Define a rectangle"""
 
 
 class Rectangle:
-    """Define a rectangle"""
+    """Represent a rectangle"""
     def __init__(self, width=0, height=0):
-        """Represent a rectangle.
+        """Initialize a rectangle.
 
         Args:
             width (integer): width of the rectangle.
@@ -13,7 +14,7 @@ class Rectangle:
         """
         self.__width = width
         self.__height = height
-    
+
     @property
     def width(self):
         """Get current rectangle width.

@@ -1,11 +1,12 @@
 #!/usr/bin/ppython3
 # Lujaja Luvuga <jarzcyber@gmail.com>
+"""Define A rectangle"""
 
 
 class Rectangle:
-    """Define a rectangle"""
+    """Represent a rectangle"""
     def __init__(self, width=0, height=0):
-        """Represent a rectangle.
+        """Initialize a rectangle.
 
         Args:
         width (integer): first parameter.

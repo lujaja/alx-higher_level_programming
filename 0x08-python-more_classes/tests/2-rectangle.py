@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 # Lujaja Luvuga <jarzcyber@gmail.com>
+"""Define a rectangle"""
 
 
 class Rectangle:
-    """Define a rectangle"""
+    """Represent a rectangle"""
     def __init__(self, width=0, height=0):
-        """Represent a rectangle.
+        """Initialize a rectangle.
         Args:
             width (integer): width of the Rectangle.
             height (integer): height of the Rectangle.
@@ -55,8 +56,8 @@ class Rectangle:
 
     def area(self):
         """Computes and return the area of the rectangle.
-        
-        area method used: 
+
+        area method used:
             area of a rectangle = width multiplied by height.
         Return:
             Area of a rectangle
@@ -71,5 +72,4 @@ class Rectangle:
         Return:
             Perimeter
         """
-        return ((self.__width  + self.__height) * 2)
-
+        return ((self.__width + self.__height) * 2)
