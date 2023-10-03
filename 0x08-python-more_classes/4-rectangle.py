@@ -62,10 +62,16 @@ class Rectangle:
         return ((self.__height + self.__width) * 2)
 
     def __str__(self):
+        """Return relevant string to the user"""
+        rec = []
         if (self.__width == 0) or (self.__height == 0):
             return ("")
         for i in range(0, self.__height):
-            [print("#", end="") for j in range(0, self.__width)]
-            if i < (self.__height -  1):
-                print("")
-        return ("")
+            [rec.append("#") for j in range(0, self.__width)]
+            rec.append("\n")
+        rec.pop()
+        return ("".join(rec))
+
+    def __repr__(self):
+        """Return formal string relevant to developer"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
