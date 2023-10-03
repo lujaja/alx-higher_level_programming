@@ -66,6 +66,6 @@ class Rectangle:
             return ("")
         for i in range(0, self.__height):
             [print("#", end="") for j in range(0, self.__width)]
-            if i < (self.__height -  1):
+            if i < (self.__height - 1):
                 print("")
         return ("")
