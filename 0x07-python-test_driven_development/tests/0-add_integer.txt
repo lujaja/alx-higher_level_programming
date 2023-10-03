@@ -1,0 +1,50 @@
+# 0-add_integer.txt
+# Lujaja Luvuga <jarzcyber@gmail.com>
+
+***************************
+How to use 0-add_integer.py
+***************************
+
+This module define integer addition function ""add_integer(a, b=98)"".
+
+Usage:
+******
+
+"add_integer(...)" Return the addition of its two arguments.
+The second argument is optional
+Example:
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(2)
+	100
+
+Foats are casted to integers before addition.
+Example:
+	>>> add_integer(4.5, -1)
+	3
+
+""add_integer"" expect both argumets to be either integer or float othewise raise TypeError
+Example:
+	>>> add_integer("test", "str")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(4, "what!")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer("again", 7)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(89, -89.6)
+	0
+	
+more tests
+Example:
+	>>> add_integer(float('t'))
+	Traceback (most recent call last):
+	ValueError: could not convert string to float: 't'
+
+	>>> add_integer(float("inf"))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
