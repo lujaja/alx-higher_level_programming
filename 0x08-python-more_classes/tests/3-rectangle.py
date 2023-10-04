@@ -1,4 +1,4 @@
-#!/usr/bin/ppython3
+#!/usr/bin/python3
 # Lujaja Luvuga <jarzcyber@gmail.com>
 """Define A rectangle"""
 
@@ -66,5 +66,6 @@ class Rectangle:
             return ("")
         for i in range(0, self.__height):
             [print("#", end="") for j in range(0, self.__width)]
-            print("")
+            if i < (self.__height - 1):
+                print("")
         return ("")

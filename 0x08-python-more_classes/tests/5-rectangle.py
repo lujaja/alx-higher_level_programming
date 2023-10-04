@@ -4,16 +4,7 @@
 
 
 class Rectangle:
-    """Represent a rectangle
-
-    Attributes:
-        number_of_instances (int): The  umber of rectangle instances
-        print_symbol (any): Symbol used for string representation
-    """
-
-    number_of_instances = 0
-    print_symbol = "#"
-
+    """Represent a rectangle"""
     def __init__(self, width=0, height=0):
         """Initialize rectangle.
 
@@ -23,7 +14,6 @@ class Rectangle:
         """
         self.__width = width
         self.__height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -70,15 +60,14 @@ class Rectangle:
     def __str__(self):
         """Return informal representations relevant to the user
         about an object"""
-        rect = []
+        rec = []
         if (self.__width == 0) or (self.__height == 0):
             return ""
         for i in range(0, self.__height):
-            [rect.append(str(self.print_symbol)) for j in
-                range(0, self.__width)]
-            if i != (self.__height - 1):
-                rect.append("\n")
-        return ("".join(rect))
+            [rec.append("#") for j in range(0, self.__width)]
+            rec.append("\n")
+        rec.pop()
+        return "".join(rec)
 
     def __repr__(self):
         """Return forma representation relevant to recreate the object"""
@@ -86,5 +75,4 @@ class Rectangle:
 
     def __del__(self):
         """Detects deltion of an instance and prints a message"""
-        self.number_of_instances -= 1
         print("Bye rectangle...")
