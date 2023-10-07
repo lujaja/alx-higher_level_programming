@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/pyhton3
 # Lujaja Luvuga <jarzcyber@gmail.com>
 """Define a rectangle"""
 
@@ -108,6 +108,10 @@ class Rectangle:
             size (int): new rectangle size
         Return size, size
         """
+        if not isinstance(size, int):
+            raise TypeError("width must be an integer")
+        elif size < 0:
+            raise ValueError("width must be >= 0")
         return (cls(size, size))
 
     def __str__(self):
