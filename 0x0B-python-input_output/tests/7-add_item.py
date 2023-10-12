@@ -18,4 +18,3 @@ if __name__ == '__main__':
     for a in sys.argv[1:]:
         my_list.append(a)
     save(my_list, filename)
-    print(my_list)
