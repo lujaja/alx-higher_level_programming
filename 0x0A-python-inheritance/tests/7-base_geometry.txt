@@ -25,3 +25,35 @@ check for string None::
 
 check for none string input for name::
 	>>> bg.integer_validator(90, 89)
+
+check for area method::
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+check for zero input::
+	>>> bg.integer_validator("age", 0)
+	Traceback (most recent call last):
+	ValueError: age must be greater than 0
+
+check for list input::
+	>>> bg.integer_validator("age", [7])
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+check for logical input::
+	>>> bg.integer_validator("age", True)
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+	>>> bg.integer_validator(True, 4)
+
+check for set input::
+	>>> bg.integer_validator("test", {5, 8})
+	Traceback (most recent call last):
+	TypeError: test must be an integer
+
+check for tuple input::
+	>>> bg.integer_validator("test", (2, 4))
+	Traceback (most recent call last):
+	TypeError: test must be an integer
