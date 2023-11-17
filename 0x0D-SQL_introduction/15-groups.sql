@@ -1,3 +1,5 @@
 -- This script list numbers of records with same score in table
-SELECT score, COUNT(score) AS numbers FROM second_table GROUP BY score
-ORDER BY numbers DESC;
+SELECT score, COUNT(score) AS number
+FROM second_table
+GROUP BY score
+ORDER BY number DESC;
