@@ -16,7 +16,8 @@ if __name__ == "__main__":
     ptr = db.cursor()
 
     try:
-        ptr.execute("select * from states where name like 'N%'order by id asc")
+        ptr.execute("select * from states where name like 'N%'\
+                order by states.id asc")
         rows = ptr.fetchall()
         for row in rows:
             print(row)
