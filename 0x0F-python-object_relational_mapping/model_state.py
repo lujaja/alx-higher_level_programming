@@ -9,6 +9,12 @@ Base = declarative_base()
 
 
 class State(Base):
+    """
+    States class inherits from Base. this class links to the MySQL table states.
+    Attributes:
+        id: represent column of integer type, pk, can't be null.
+        name: column of string type
+    """
     __tablename__ = 'state'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(255), nullable=False)
+    id = Column(Integer, primary_key=True, nullable=False, unique=True)
+    name = Column(String(128), nullable=False)
