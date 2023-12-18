@@ -10,7 +10,8 @@ Base = declarative_base()
 
 class State(Base):
     """
-    States class inherits from Base. this class links to the MySQL table states.
+    States class inherits from Base. this class links to the MySQL
+    table states.
     Attributes:
         id: represent column of integer type, pk, can't be null.
         name: column of string type
