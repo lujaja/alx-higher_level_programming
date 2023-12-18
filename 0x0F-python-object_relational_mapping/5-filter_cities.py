@@ -6,30 +6,32 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-    db = MySQLdb.connect(
-            host='localhost',
-            user=argv[1],
-            passwd=argv[2],
-            db=argv[3],
-            port=3306
-        )
-
-    ptr = db.cursor()
-
     try:
-        ptr.execute("select name from cities where state_id=(select id from \
-                    states where name like binary %s) order by cities.id \
-                    asc", (argv[4],))
-        rows = ptr.fetchall()
-        i = 0
-        for row in rows:
-            for letter in row:
-                print(letter, end='')
-                if i < len(rows) - 1:
-                    print(", ", end='')
-            i += 1
-    except Exception:
-        db.rollback()
+        db = MySQLdb.connect(
+                host='localhost',
+                user=argv[1],
+                passwd=argv[2],
+                db=argv[3],
+                port=3306
+            )
 
-    ptr.close()
-    db.close()
+        ptr = db.cursor()
+
+        ptr.execute("select cities.id, cities.name, states.name from cities \
+                inner join states on cities.state_id = states.id where \
+                states.name like binary %s order by cities.id asc",
+                    (argv[4],))
+
+        rows = ptr.fetchall()
+        for row in rows:
+            print(row[1], end=", " if row != rows[-1] else "")
+        print()
+    except Exception as err:
+        db.rollback()
+        print("MySQL Error {}: {}".format(err.args[0], err.args[1]))
+
+    finally:
+        if 'ptr' in locals() or 'ptr' in globals():
+            ptr.close()
+        if 'db' in locals() or 'db' in globals():
+            db.close()
