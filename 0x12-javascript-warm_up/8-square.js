@@ -1,6 +1,5 @@
 #!/usr/bin/node
-let x = process.argv[2];
-x = parseInt(x, 10);
+const x = Math.floor(Number(process.argv[2]));
 if (!x) {
   console.log('Missing size');
 } else {
