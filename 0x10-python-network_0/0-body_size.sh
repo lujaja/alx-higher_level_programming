@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Display size of body if response
 if [ -z "$1" ]; then 
 	exit 1
