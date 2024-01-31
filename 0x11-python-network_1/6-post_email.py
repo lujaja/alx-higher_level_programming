@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Post request
+"""
+Sents a post request
+"""
 from sys import argv
 import requests
 
