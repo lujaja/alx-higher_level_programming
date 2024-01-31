@@ -10,4 +10,4 @@ if __name__ == "__main__":
     if response.status_code == 200:
         res = response.text
         print("Body response:\n\t- type: {}\n\t- content: {}".format
-              (type(res), "ok"))
+              (type(res), "OK"))
