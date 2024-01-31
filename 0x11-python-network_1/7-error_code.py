@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Sends a request to url
+"""
+Sends a request to url
+"""
 from sys import argv
 import requests
 
