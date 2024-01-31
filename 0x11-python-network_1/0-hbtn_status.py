@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-# Fetches url status
-
-import urllib.request
+"""
+Script to fetch https://alx-intranet.hbtn.io/status
+"""
+from urllib.request import urlopen
 
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as r:
+    with urlopen('https://alx-intranet.hbtn.io/status') as r:
         status = r.read()
 
     print("Body response:")
