@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-# Sends a post request
-from urllib.request import Request, urlopen
+"""
+Sends a post request
+"""
+from urllib.request import urlopen
 from urllib.parse import urlencode
 from sys import argv
 
