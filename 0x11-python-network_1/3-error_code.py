@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Sendt a request to url and displays the body
+"""
+Sendt a request to url and displays the body
+"""
 from urllib.request import urlopen
 import urllib.error
 from sys import argv
