@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Fetches status
+"""
+Fetches status
+"""
 import requests
 
 if __name__ == "__main__":
