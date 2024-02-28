@@ -1,5 +1,6 @@
 $(document).ready(() => {
     $("#add_item").click(() => {
-        $(".my_list").append("<li>Item</li>");
+        let myList = $(".my_list");
+        myList.append("<li>Item</li>");
     })
 })

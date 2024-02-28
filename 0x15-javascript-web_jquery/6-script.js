@@ -1,5 +1,6 @@
 $(document).ready(() => {
     $("#update_header").click(() => {
-        $("header").text("New Header!!!")
+        let header = $("header");
+        header.text("New Header!!!")
     })
 })
